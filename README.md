@@ -1,11 +1,11 @@
 # Transfer API — перевод детей между спортивными центрами
 
 API для обработки обращений CHANGE_PROVIDER.  
-Реализован на **NestJS, TypeScript, Prisma, PostgreSQL**.
+Стек **NestJS, TypeScript, Prisma, PostgreSQL**.
 
 ## Техническое решение
 
-- **Архитектура**: чистый NestJS с декомпозицией:
+- **Архитектура**:
   - `Controller` — тонкий слой для HTTP-запросов
   - `AppealsService` — orchestrator бизнес-логики
   - `TransferService` — перенос детей между программами
@@ -15,7 +15,7 @@ API для обработки обращений CHANGE_PROVIDER.
   - Каждому ребёнку создаётся новая запись enrollment с `status: PENDING`
   - Обработка ошибок для каждого ребёнка отдельно (`results[]`)
   - Если все переведены — обращение закрывается (`status: RESOLVED`)
-- **Соблюдение SOLID** и строгая типизация TypeScript
+  - 
 - **Seed** для тестовых данных: создаются центры, программы, дети, enrollments и обращение
 
 ## Установка
@@ -23,7 +23,7 @@ API для обработки обращений CHANGE_PROVIDER.
 Клонируем репозиторий:
 
 ```bash
-git clone <твоя-ссылка-на-github>
+git clone https://github.com/Abzall/Transfer_API.git
 cd transfer-api
 npm install
 
